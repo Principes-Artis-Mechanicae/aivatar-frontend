@@ -1,0 +1,41 @@
+
+/* 리셋 스타일 */
+body, h1, p {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* 컨테이너 스타일 */
+.container {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-position-y: 30%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* 메인 스타일 */
+.main {
+  flex: 1;
+  text-align: center;
+}
+
+/* 푸터 스타일 */
+.footer {
+  background-color: #f5f5f5; /* 푸터 배경색을 검정색으로 설정 */
+  padding: 1rem;
+  margin-top: 5%;
+  text-align: center;
+  color: #000000;
+}
+
+.gradient-text {
+    font-size: 1.3em;
+    background-clip: text; /* 텍스트의 배경을 그라데이션으로 적용 */
+    background-image: linear-gradient(to right, #886aeb 0%,#dc5ba7 44%, #fb7960 79%, #fcb413 100%);
+    color: transparent; /* 텍스트의 색을 투명으로 설정 */
+  }
