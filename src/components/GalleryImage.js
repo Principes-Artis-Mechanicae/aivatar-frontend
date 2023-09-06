@@ -73,7 +73,7 @@ function GalleryImages() {
     <div
       className="container"
       id="bg"
-      style={{ backgroundImage: `url(${src})` }}
+      style={{ backgroundImage: `url(${src})`, backgroundPositionY: "30%" }}
     >
       <Header />
       <main className="main">

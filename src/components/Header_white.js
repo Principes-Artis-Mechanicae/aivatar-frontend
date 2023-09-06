@@ -11,19 +11,15 @@ function Header() {
     <header className="header">
       <div className="image-links" style={{ marginLeft: "10px" }}></div>
       <div className="center-image">
-        <ImageButton to="/" src={"/images/IMG_0057.PNG"} alt="Logo" />
+        <ImageButton to="/" src={"/images/IMG_0058.PNG"} alt="Logo" />
       </div>
       <div className="image-links">
         <ImageButton
           to="/personal"
-          src={"/images/my_icon.png"}
+          src={"/images/IMG_0055.PNG"}
           alt="마이페이지"
         />
-        <ImageButton
-          to="/gallery"
-          src={"/images/gallery_icon.png"}
-          alt="갤러리"
-        />
+        <ImageButton to="/gallery" src={"/images/IMG_0056.PNG"} alt="갤러리" />
       </div>
     </header>
   );

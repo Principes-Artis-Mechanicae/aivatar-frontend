@@ -68,8 +68,8 @@ const Login = () => {
           </div>
           <div
             style={{
-              marginLeft: "44%",
-              marginRight: "44%",
+              marginLeft: "20%",
+              alignContent: "center",
               marginTop: "10%",
               padding: "2%",
               paddingTop: "2.5%",
@@ -77,6 +77,7 @@ const Login = () => {
               borderRadius: "15px",
               border: "none",
               width: "10%",
+              textAlign: "center",
             }}
           >
             {/* <ImageButton
@@ -86,6 +87,7 @@ const Login = () => {
               classNameLink="rounded-Link"
               classNameImg="social-login-image"
             /> */}
+
             <KakaoLogin />
           </div>
         </div>

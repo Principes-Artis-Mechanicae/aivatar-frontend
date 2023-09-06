@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./MainPage.css";
-import Header from "./Header";
+import Header from "./Header_white";
 import { useNavigate } from "react-router-dom";
 import KakaoLogin from "react-kakao-login";
 
