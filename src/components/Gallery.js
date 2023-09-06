@@ -11,26 +11,20 @@ function Gallery() {
     {
       key: "1",
       id: "1",
-      title: "title1",
+      title: "이미지 생성 완료!",
       src: "/images/picture-dynamic-color.png",
     },
     {
       key: "2",
       id: "2",
-      title: "title2",
+      title: "이미지 생성 완료!",
       src: "/images/gallery_1.png",
     },
     {
       key: "333",
       id: "333",
-      title: "타이틀",
+      title: "이미지 생성 중...",
       src: "/images/img.png",
-    },
-    {
-      key: "2",
-      id: "2",
-      title: "title2",
-      src: "/images/gallery_1.png",
     },
   ]);
   /* GalleryObj source 받기 */

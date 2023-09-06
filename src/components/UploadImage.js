@@ -18,7 +18,7 @@ function UploadImage() {
 
       console.log(file);
       axios({
-        baseURL: "API_HOST",
+        baseURL: "https://eef66162-6fa9-41b2.gradio.live",
         url: "/images/:username/thumbnail",
         method: "POST",
         data: formData,

@@ -12,7 +12,6 @@ body, h1, p {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-position-y: 30%;
   background-size: contain;
   background-repeat: no-repeat;
   overflow: hidden;

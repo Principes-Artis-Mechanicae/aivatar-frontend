@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./MainPage.css";
-import Button from "./Button";
 import Header from "./Header";
 import { useNavigate } from "react-router-dom";
 import KakaoLogin from "react-kakao-login";
@@ -21,7 +20,10 @@ function App() {
   return (
     <div
       className="container"
-      style={{ backgroundImage: "url(/images/1.png)" }}
+      style={{
+        background: "url(/images/1.png) no-repeat top",
+        backgroundSize: "contain",
+      }}
     >
       <Header />
       <main className="main">

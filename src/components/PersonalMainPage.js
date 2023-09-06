@@ -9,7 +9,9 @@ function PersonalMain() {
   return (
     <div
       className="container"
-      style={{ backgroundImage: "url(/images/background.png)" }}
+      style={{
+        backgroundImage: "url(/images/background.png)",
+      }}
     >
       <Header />
       <main className="main">
