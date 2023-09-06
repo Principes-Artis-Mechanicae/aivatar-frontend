@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function UploadImage() {
   const navigate = useNavigate();
@@ -16,21 +17,22 @@ function UploadImage() {
       formData.append("image", file);
 
       console.log(file);
-      // axios({
-      //   baseURL: API_HOST,
-      //   url: "/images/:username/thumbnail",
-      //   method: "POST",
-      //   data: formData,
-      //   headers: {
-      //     "Content-Type": "multipart/form-data",
-      //   },
-      // })
-      //   .then((response) => {
-      //     console.log(response.data);
-      //   })
-      //   .catch((error) => {
-      //     console.error(error);
-      //   });
+      axios({
+        baseURL: "API_HOST",
+        url: "/images/:username/thumbnail",
+        method: "POST",
+        data: formData,
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
+        .then((response) => {
+          console.log("resp:", response.data);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+      ///////////////////////////////////////////
       navigate("/complete");
     } else {
       console.log("timing error");

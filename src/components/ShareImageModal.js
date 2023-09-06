@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./UploadImageModal.css";
 import "../App.css";
 import ImageButton from "./ImageButton";
@@ -6,19 +6,30 @@ import UploadImage from "./UploadImage";
 import Button from "./Button";
 import { useLocation } from "react-router-dom";
 
-const Modal = ({ isOpen, onClose, state }) => (
-  <div className={`modal ${isOpen ? "open" : ""}`}>
-    <div className="modal-content">
-      <h2 style={{ margin: "3vh" }}>공유하기</h2>
-      <img
-        src="/images/picture-dynamic-color.png"
-        style={{ height: "15vh", margin: "3vh" }}
-      />
-      <p>전달된 state id: {state ? state.id : "none"}</p>
-      <Button onClick={onClose} classNameButton="grey-button" text="닫기" />
+function Modal({ isOpen, onClose, state }) {
+  const Kakao = window.Kakao;
+
+  return (
+    <div className={`modal ${isOpen ? "open" : ""}`}>
+      <div className="modal-content">
+        <h2 style={{ margin: "3vh" }}>공유하기</h2>
+        <img
+          src="/images/picture-dynamic-color.png"
+          style={{ height: "15vh", margin: "3vh" }}
+        />
+        <p>전달된 state id: {state ? state.id : "none"}</p>
+        <ImageButton
+          style={{ width: "10%", height: "10%", display: "none" }}
+          src="/images/kakao_icon.png"
+          alt="카카오톡으로 공유하기"
+          classNameLink="rounded-Link"
+          classNameImg="social-login-image"
+        />
+        <Button onClick={onClose} classNameButton="grey-button" text="닫기" />
+      </div>
     </div>
-  </div>
-);
+  );
+}
 
 function ModalButton({ curState }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,6 +47,7 @@ function ModalButton({ curState }) {
       return undefined;
     }
   };
+
   const initialState =
     curState || location.state || loadStateFromLocalStorage();
   const [state, setState] = useState(initialState);

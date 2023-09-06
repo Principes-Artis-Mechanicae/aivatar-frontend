@@ -6,6 +6,7 @@ import { useNavigate, useEffect } from "react-router-dom";
 
 function Gallery() {
   const navigate = useNavigate();
+
   let [GalleryObjs, setGalleryObjs] = useState([
     {
       key: "1",

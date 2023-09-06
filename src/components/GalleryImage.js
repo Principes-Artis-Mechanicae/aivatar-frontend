@@ -40,12 +40,41 @@ function GalleryImages() {
     }
   };
 
+  const downloadFile = (url) => {
+    url = src;
+
+    fetch(url, { method: "GET" })
+      .then((res) => {
+        return res.blob();
+      })
+      .then((blob) => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = src;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout((_) => {
+          window.URL.revokeObjectURL(url);
+        }, 60000);
+        a.remove();
+        //setOpen(false);
+      })
+      .catch((err) => {
+        console.error("err: ", err);
+      });
+  };
+
   const id = state ? state.id : null; // null 체크
   const title = state ? state.title : null; // null 체크
   const src = state ? state.src : "url(/images/1.png)";
 
   return (
-    <div className="container" style={{ backgroundImage: `url(${src})` }}>
+    <div
+      className="container"
+      id="bg"
+      style={{ backgroundImage: `url(${src})` }}
+    >
       <Header />
       <main className="main">
         <h1
@@ -70,6 +99,7 @@ function GalleryImages() {
               width: "70%",
               height: "5em",
             }}
+            onClick={downloadFile}
             text="이미지 저장하기"
           />
         </div>

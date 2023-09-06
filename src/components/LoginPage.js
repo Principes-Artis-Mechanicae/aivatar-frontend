@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import "./LoginPage.css";
 import ImageButton from "./ImageButton";
 import { useNavigate } from "react-router-dom";
+import KakaoLogin from "./KakaoLogin";
 
 const Login = () => {
+  const onChange = () => {
+    const kakaoClientId = "61342a480837d4d443ab92b57c8068dc";
+  };
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -51,7 +55,7 @@ const Login = () => {
                   color: "#999999",
                 }}
               >
-                <a>아이디/비밀번호를 잊어버리셨나요?</a>
+                <a href="/">아이디/비밀번호를 잊어버리셨나요?</a>
               </div>
               <button
                 type="submit"
@@ -71,16 +75,18 @@ const Login = () => {
               paddingTop: "2.5%",
               border: "1px solid #797979",
               borderRadius: "15px",
+              border: "none",
               width: "10%",
             }}
           >
-            <ImageButton
+            {/* <ImageButton
               to="/"
-              src="/images/google_icon.png"
-              alt="Image 1"
+              src="/images/kakao_icon.png"
+              alt="카카오톡으로 로그인하기"
               classNameLink="rounded-Link"
               classNameImg="social-login-image"
-            />
+            /> */}
+            <KakaoLogin />
           </div>
         </div>
       </div>

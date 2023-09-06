@@ -3,6 +3,7 @@ import "./MainPage.css";
 import Button from "./Button";
 import Header from "./Header";
 import { useNavigate } from "react-router-dom";
+import KakaoLogin from "react-kakao-login";
 
 function App() {
   let [Logedin, setLogedin] = useState(false);
@@ -33,6 +34,7 @@ function App() {
           onClick={LoginCheck}
           className="rainbow-button"
           style={{ marginTop: "15%" }}
+          onSubmit={KakaoLogin.onSuccess}
         >
           시작하기
         </button>
